@@ -1,0 +1,7 @@
+<%= simple_form_for @restaurant, html: {  class: 'form-inline' } do |f| %>
+  <%= f.input :name, placeholder: 'Restaurant name', label: false, error: 'Name field is require' %>
+  <%= f.input :address, placeholder: 'Restaurant address', label: false, error: 'Address field is require' %>
+  <%= f.input :phone_number, placeholder: 'Restaurant tel', label: false, as: :tel %>
+  <%= f.select :category, ["chinese", "italian", "japanese", "french", "belgian"] %>
+  <%= f.button :submit, :class => 'btn btn-primary' %>
+<% end %>
